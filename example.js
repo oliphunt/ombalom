@@ -9,12 +9,12 @@ function loop(){
 		rectangle(circle_x);
 		line(circle_x, 0, 0, 600);
 		line(600, 0, 600, 600);
-		circle(circle_x, circle_y, circle_diameter, 'red', 'black', 3);
+		circle(circle_x, circle_y, circle_diameter, 'red');
 		circle_x = circle_x + speed;
 		circle_diameter = circle_diameter - (speed /2);
 		circle_y = circle_y;
 		circle_2_y = circle_2_y + (speed / 2)
-		circle(circle_x, circle_2_y, circle_diameter, 'red', 'black', 3);
+		circle(circle_x, circle_2_y, circle_diameter, 'red');
 		circle_x = circle_x + speed;
 		circle_diameter = circle_diameter - (speed /2);
 		circle_y = circle_y + (speed / 4);
