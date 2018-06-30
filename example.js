@@ -4,17 +4,19 @@ var circle_y = 0;
 circle_2_y = circle_y;
 var speed = 2;
 
-function loop(){
-		Ombalom.cls();
-		Ombalom.rectangle(circle_x);
-		Ombalom.line(circle_x, 0, 0, 600);
-		Ombalom.line(600, 0, 600, 600);
-		Ombalom.circle(circle_x, circle_y, circle_diameter, 'red');
+var canvas = new ombalom.Canvas('OmbalomCanvas')
+
+canvas.loop = function(){
+		this.clear();
+		canvas.rectangle(circle_x);
+		canvas.line(circle_x, 0, 0, 600);
+		canvas.line(600, 0, 600, 600);
+		canvas.circle(circle_x, circle_y, circle_diameter, 'red');
 		circle_x = circle_x + speed;
 		circle_diameter = circle_diameter - (speed /2);
 		circle_y = circle_y;
 		circle_2_y = circle_2_y + (speed / 2)
-		Ombalom.circle(circle_x, circle_2_y, circle_diameter, 'red');
+		canvas.circle(circle_x, circle_2_y, circle_diameter, 'red');
 		circle_x = circle_x + speed;
 		circle_diameter = circle_diameter - (speed /2);
 		circle_y = circle_y + (speed / 4);
@@ -26,4 +28,4 @@ function loop(){
 		}
 }
 
-Ombalom.start();
+canvas.startAnimation();
